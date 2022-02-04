@@ -62,6 +62,8 @@ flutter:
     - assets/images/Image5.png
     - assets/images/gear.svg
     - assets/images/person.svg
+    - assets/json/main.json
+    - assets/images/temp.jpeg
 
               
   fonts:

@@ -10,5 +10,4 @@ void main() {
     title: "MainPage",
     home: MyApp(),
   ));
-  // runApp(const MyApp());
 }

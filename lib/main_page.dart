@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'setting_dialog.dart';
 import 'save_files_page.dart';
-import 'game_page.dart';
+// import 'game_page.dart';
+import 'package:MaReulraeba/views/temp.dart';
+import 'message_box.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
