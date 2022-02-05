@@ -1,6 +1,5 @@
 # 마를래바 MaReulraeba
 
----
 
 **마를래바(MaReulraeba)**는 이전 세대에 비해 문해력이 많이 떨어지는 10, 20 세대를 위하여 그들에게 잘 맞는 게임 컨텐츠로 문해력을 키울 수 있도록 해주는 어플입니다.
 
@@ -22,7 +21,7 @@
 
 ## How to run?
 
-Required
+### Required
 
 - Flutter
 
