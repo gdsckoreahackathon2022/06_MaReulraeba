@@ -4,8 +4,6 @@ import 'setting_dialog.dart';
 import 'save_files_page.dart';
 // import 'game_page.dart';
 import 'message_box.dart';
-import 'bottom_sheet.dart';
-import 'my_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -32,11 +30,13 @@ class MyApp extends StatelessWidget {
       title: 'Figma to Flutter',
       home: Scaffold(
         body: Container(
+          // height: 926,
+          // width: 428,
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage("assets/images/temp.jpeg"),
               fit: BoxFit.cover,
-              opacity: 0.7,
+              opacity: 0.9,
             ),
           ),
           child: SafeArea(
@@ -51,22 +51,12 @@ class MyApp extends StatelessWidget {
                     children: [
                       IconButton(
                         padding: const EdgeInsets.only(left: 40),
-
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => MyPage(),
-                            ),
-                          );
-                        },
+                        onPressed: () => settingDialog(context),
                         icon: SvgPicture.asset('assets/images/person.svg'),
                       ),
                       IconButton(
                         padding: const EdgeInsets.only(right: 40),
-
-                        onPressed: () => settingDialog(context),
-
+                        onPressed: () {},
                         icon: SvgPicture.asset('assets/images/gear.svg'),
                       )
                     ],
@@ -133,25 +123,25 @@ class MyApp extends StatelessWidget {
                     width: 350,
                     height: 72,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(15)),
-                      border: Border.all(
-                          color: const Color(0xff000000),
-                          width: 2.7300000190734863),
-                      boxShadow: [
-                        BoxShadow(
+                        borderRadius: BorderRadius.all(Radius.circular(15)),
+                        border: Border.all(
                             color: const Color(0xff000000),
-                            offset:
-                                Offset(2.7300000190734863, 2.7300000190734863),
-                            blurRadius: 0,
-                            spreadRadius: 0)
-                      ],
-                    ),
+                            width: 2.7300000190734863),
+                        boxShadow: [
+                          BoxShadow(
+                              color: const Color(0xff000000),
+                              offset: Offset(
+                                  2.7300000190734863, 2.7300000190734863),
+                              blurRadius: 0,
+                              spreadRadius: 0)
+                        ],
+                        color: Color(0xffe0a973)),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15)),
-                          primary: Color(0xffe0a973)),
-
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15)),
+                        primary: Colors.grey[300],
+                      ),
                       onPressed: () {
                         Navigator.push(
                             context,
@@ -188,9 +178,10 @@ class MyApp extends StatelessWidget {
                         color: const Color(0xfff6e0b4)),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15)),
-                          primary: Color(0xffe0a973)),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15)),
+                        primary: Colors.grey[300],
+                      ),
                       onPressed: () {
                         Navigator.push(
                             context,
