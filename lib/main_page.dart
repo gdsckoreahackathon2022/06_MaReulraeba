@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import 'setting_dialog.dart';
 import 'save_files_page.dart';
 // import 'game_page.dart';
-import 'package:MaReulraeba/views/temp.dart';
 import 'message_box.dart';
 import 'bottom_sheet.dart';
 import 'my_page.dart';
@@ -52,6 +51,7 @@ class MyApp extends StatelessWidget {
                     children: [
                       IconButton(
                         padding: const EdgeInsets.only(left: 40),
+
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -64,64 +64,94 @@ class MyApp extends StatelessWidget {
                       ),
                       IconButton(
                         padding: const EdgeInsets.only(right: 40),
+
                         onPressed: () => settingDialog(context),
+
                         icon: SvgPicture.asset('assets/images/gear.svg'),
                       )
                     ],
                   ),
                   const SizedBox(height: 100),
                   // 수누리말
-                  const Text("마를래바",
-                      style: TextStyle(
-                          color: Color(0xff000000),
-                          fontWeight: FontWeight.w700,
-                          fontFamily: "NotoSans",
-                          fontStyle: FontStyle.normal,
-                          fontSize: 50.0),
-                      textAlign: TextAlign.center)
-                  // Rectangle 4
-                  ,
-                  const SizedBox(height: 50),
-                  Image.asset(
-                    'assets/images/Image5.png',
-                    height: 172,
+
+                  Column(
+                    children: [
+                      Text("MaReulraeba",
+                          style: const TextStyle(
+                              color: const Color(0xffffffff),
+                              fontWeight: FontWeight.w400,
+                              fontFamily: "NIXGONFONTSV2.0-M",
+                              fontStyle: FontStyle.normal,
+                              fontSize: 26.0),
+                          textAlign: TextAlign.center), // 마를래바
+                      Text("마를래바",
+                          style: const TextStyle(
+                              color: const Color(0xffffffff),
+                              fontWeight: FontWeight.w400,
+                              fontFamily: "NIXGONFONTSV2.0-M",
+                              fontStyle: FontStyle.normal,
+                              fontSize: 50.0),
+                          textAlign: TextAlign.center)
+                    ],
                   ),
-                  const SizedBox(height: 50),
+
+                  const SizedBox(height: 222),
                   Container(
-                      child: const Align(
-                        alignment: Alignment.center,
-                        child: // 게임시작
-                            Text("게임시작",
-                                style: TextStyle(
-                                    color: Color(0xff181818),
-                                    fontWeight: FontWeight.w700,
-                                    fontFamily: "Helvetica",
-                                    // fontStyle: FontStyle.oblique,
-                                    fontSize: 24.0),
-                                textAlign: TextAlign.center),
-                      ),
-                      width: 350,
-                      height: 72,
-                      decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(15)),
-                          boxShadow: [
-                            BoxShadow(
-                                color: Color(0x40000000),
-                                offset: Offset(0, 4),
-                                blurRadius: 4,
-                                spreadRadius: 0)
-                          ],
-                          color: Color(0xffd4d4d4))),
-                  const SizedBox(height: 28),
-                  SizedBox(
+                    //   margin: EdgeInsets.fromLTRB(0.0, 348.0, 0.0, 0.0),
+                    child: const Align(
+                      alignment: Alignment.center,
+                      child: // 게임시작
+                          Text("게임시작",
+                              style: TextStyle(
+                                  color: Color(0xff181818),
+                                  fontWeight: FontWeight.w700,
+                                  fontFamily: "Helvetica",
+                                  // fontStyle: FontStyle.oblique,
+                                  fontSize: 24.0),
+                              textAlign: TextAlign.center),
+                    ),
                     width: 350,
                     height: 72,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(15)),
+                      border: Border.all(
+                          color: const Color(0xff000000),
+                          width: 2.7300000190734863),
+                      boxShadow: [
+                        BoxShadow(
+                            color: const Color(0xff000000),
+                            offset:
+                                Offset(2.7300000190734863, 2.7300000190734863),
+                            blurRadius: 0,
+                            spreadRadius: 0)
+                      ],
+                      color: const Color(0xffe0a973),
+                    ),
+                  ),
+                  const SizedBox(height: 28),
+                  Container(
+                    width: 350,
+                    height: 72,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(15)),
+                      border: Border.all(
+                          color: const Color(0xff000000),
+                          width: 2.7300000190734863),
+                      boxShadow: [
+                        BoxShadow(
+                            color: const Color(0xff000000),
+                            offset:
+                                Offset(2.7300000190734863, 2.7300000190734863),
+                            blurRadius: 0,
+                            spreadRadius: 0)
+                      ],
+                    ),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15)),
-                        primary: Colors.grey[300],
-                      ),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15)),
+                          primary: Color(0xffe0a973)),
+
                       onPressed: () {
                         Navigator.push(
                             context,
@@ -139,16 +169,28 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 28),
-
-                  SizedBox(
+                  Container(
                     width: 350,
                     height: 72,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(15)),
+                        border: Border.all(
+                            color: const Color(0xff000000),
+                            width: 2.7300000190734863),
+                        boxShadow: [
+                          BoxShadow(
+                              color: const Color(0xff000000),
+                              offset: Offset(
+                                  2.7300000190734863, 2.7300000190734863),
+                              blurRadius: 0,
+                              spreadRadius: 0)
+                        ],
+                        color: const Color(0xfff6e0b4)),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15)),
-                        primary: Colors.grey[300],
-                      ),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15)),
+                          primary: Color(0xffe0a973)),
                       onPressed: () {
                         Navigator.push(
                             context,

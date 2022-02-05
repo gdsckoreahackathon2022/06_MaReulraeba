@@ -64,7 +64,7 @@ flutter:
     - assets/images/person.svg
     - assets/json/main.json
     - assets/images/temp.jpeg
-
+    - assets/images/background.jpg
               
   fonts:
     - family: BM_Hanna_Air
